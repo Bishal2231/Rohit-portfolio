@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+  
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #010318;
+   
+}
+#page1,#page2,#page3,.page4{
+    height: 100vh;
+    width: 100%;
+    background: #010318;
+   
+}
+
+nav{
+
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+nav i{
+    margin-left: 20px;
+    font-size: 27px;
+}
+.hide,.menuBtn{
+    display: none;
+}
+.navContainer{
+
+   height: 90%;
+   width: 50%;
+   display: flex;
+   justify-content:space-evenly;
+   align-items: center;
+   border:2px  solid crimson;
+   border-radius: 10px;
+   margin-left: 1rem;
+  
+}
+
+
+
+.HeroContainer{
+    height: 80%;
+    width: 100%;
+    /* background-color: pink; */
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero{
+    height: 95%;
+    width: 70%;
+    /* background-color: red; */
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social{
+    height: 45%;
+    width: 11%;
+    /* background:pink; */
+    display: flex;
+    justify-content:center;
+    gap: 1.5rem;
+    flex-direction: column;
+    /* border: 2px solid #fff;
+    border-left:none;
+    border-radius: 10px; */
+ 
+}
+
+.social a{
+    background-color: crimson;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-top-Right-radius: 10px;
+    border-bottom-Right-radius: 10px;
+    width: 50px;
+    transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    gap: 1.5rem;
+  
+    
+}
+.social a:hover{
+    width: 160px;
+    justify-content: space-evenly;
+    gap: 0rem;
+    
+}
+.social a i ,.social a p{
+    color: #000;
+}
+.photo img{
+    height: 24rem;
+}
+
+.nameDetails{
+    height: 15rem;
+    width: 50%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.name{
+    font-size:6rem;
+    
+}
+
+/* ------------- Media query------------------------- */
+
+@media (max-width : 900px) {
+    .navContainer{
+      width: 60%;
+    }
+  }
+
+@media (max-width: 1320px) {
+    .hero{
+        width: 90%;
+    }
+}
+@media(max-width:1012px){
+    .name{
+        font-size: 3rem;
+    }
+    .slogan{
+        font-size: 0.8rem; 
+        padding-left: 0rem;
+    }
+}
+
+/* ------------ moblie view ---------------------------*/
+
+@media(max-width:700px){
+.menuBtn{
+    display: block;
+    margin:20px;
+}
+.navContainerHide{
+    display: none;
+}
+nav{
+    flex-direction: row-reverse;
+    align-items: start;
+    /* background-color: pink; */
+    justify-content: space-between;
+}
+.navContainer{
+ flex-direction: column;
+ margin: 0;
+}
+.hero{
+    flex-direction: column-reverse;
+}
+.name {
+    font-size: 2rem;
+}
+.nameDetails{
+    width: 100%;
+    gap: 1.5rem;
+}
+}
+
+/* ---------------------- Page:-2------------------- */
+.page2{
+ 
+}
+.secondPageHeader{
+    /* background-color: pink; */
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+.secondPageContainer{
+    /* background-color: red; */
+    height: 44%;
+    width: 100%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skillsIcon{
+    height: 20rem;
+    width: 20%;
+    /* background-color: pink; */
+    /* padding: 1.5rem; */
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.skillsIcon  i{
+    font-size: 5rem;
+}
+.javaDetail p{
+    font-size:1rem;
+    margin-right: 30px;
+}
+.javaDetail{
+    margin-left: 2rem;
+}
+.skillsIcon:hover{
+    border:2px solid crimson;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px crimson;
+}
+@media (max-width:600px){
+    .skillsIcon  i{
+        font-size: 3rem;
+    }
+    .javaDetail{
+        text-align:start;
+        margin: 0;
+    }
+    .javaDetail p{
+        font-size:0.6rem;
+        margin-right: 0px;
+    }
+    .skillsIcon{
+        width: 20%;
+
+    }
+    .secondPageContainer{
+        margin-right: 1rem;
+        justify-content: space-evenly;
+    }
+}
+
+
+.experince{
+   
+    width: 100%;
+    /* background-color: pink; */
+    margin-top: 1rem;
+    border: 2px solid crimson;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px crimson;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+}
+.experinceHeading{
+    text-align: end;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid crimson;
+    
+}
+.experinceHeading h1{
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    
+}
+.cyberCom{
+    height: 60px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease-in 0.4s;
+}
+.cyberCom:hover{
+    background-color: crimson;
+   .nameDate p ,.nameDate h3,.cyberDetail p{
+    color: #000;
+   }
+}
+.nameDate{
+    height: 90%;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: yellow; */
+    align-items: center;
+}
+.cyberDetail{
+    height: 90%;
+    width: 40%; 
+    display: flex; 
+    align-items: center;
+}
+@media(max-width:850px){
+    .cyberCom {
+        justify-content: space-evenly;
+    }
+    .nameDate {
+        width: 45%;
+    }
+}
+
+/* ------------------- contact us----------------------- */
+#page3 h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+.contactContainer{
+height: 90%;
+width: 100%;
+/* background-color: pink; */
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.contactImg{
+    height: 95%;
+    width: 35%;
+     background: url(./assets/rohit2.jpg);
+     border-radius: 1rem;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     transition: all 0.3s;
+}
+.contactImg:hover{
+    opacity: 0.5;
+    box-shadow: 0px 0px 15px crimson;
+}
+
+.contactInput{
+    height: 95%;
+    width: 55%;
+    /* background-color: red; */
+    border-top: 2px solid  crimson;
+    border-left: 2px solid  crimson;
+    border-top-left-radius: 1rem;
+    box-shadow: inset 30px 30px 30px crimson, 30px 30px 0px rgba(0, 0, 0, 0);
+
+
+}
+
+.formRigth{
+    height: 85vh;
+    width: 90%;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.inputFiledContainer{
+    height:100%;
+    width: 55%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.inputFiledContainer input {
+    padding: 0.3rem;
+    font-size: 1rem;
+    color: #000;
+    outline: none;
+    border-radius: 10px;
+    height: 3rem;
+    text-align: start;
+}
+.inputFiledContainer textarea {
+    padding: 0.3rem;
+    font-size: 1rem;
+    color: #000;
+    outline: none;
+    border-radius: 10px;
+    width: 13rem;
+    height: 6rem;
+    text-align: start;
+}
+.formBtn{
+    color: #000;
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+}
+.formBtn:hover{
+    background-color: crimson;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 30px #fff;
+}
+
+.myDetail{
+    /* background-color: pink; */
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media(max-width:1100px) {
+    .contactContainer{
+        height: 50%;
+        margin-top: 10rem;
+    } 
+    .formRigth {
+        height: 50vh;
+        margin-left: 2rem;
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:810px) {
+    .contactContainer{
+        flex-direction: column;
+        height: 90%;
+        margin-top:1rem;
+        justify-content: space-between;
+        gap: 1rem;
+    } 
+    .formRigth {
+        height: 50vh;
+        /* background-color: pink; */
+        width:auto;
+        margin-left: 2rem;
+        justify-content: space-evenly;
+    }
+    .contactImg {
+       
+        width: 300px;
+    }
+
+       
+    .myDetail{
+        display: none;
+    }
+    
+}
+
+@media (max-width:548px) {
+    .contactImg {
+       display: none;
+    }
+    .contactInput {
+        height: 68%;
+        width: 317px;
+      box-shadow: none;
+      border: 2px solid crimson;
+      border-radius: 1rem;
+      align-items: center;
+    }
+    .formRigth {
+        margin: 0;
+        margin-top: 3rem;
+    }
+}
+
+
+/* page 4---------------------------- */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.excontainer {
+    max-width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Shared Section Styling */
+  .bio-section, .education-section {
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional for slight contrast */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Section Titles */
+  .bio-section h1, .education-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  /* Education Items */
+  .education-item {
+    margin-bottom: 30px;
+  }
+  
+  .education-item h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .education-item h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  
+  .education-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph Styling for Bio */
+  .bio-section p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
