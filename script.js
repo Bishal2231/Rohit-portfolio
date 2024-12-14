@@ -247,3 +247,60 @@ function time() {
         }
     }, 200);
 }
+
+
+// backend
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#rohitform"); // Select the form
+    const button = document.querySelector(".formBtn");
+  
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+  
+      // Get the values when the button is clicked (this ensures you get the updated values)
+      const name = document.querySelector(".name");
+      const email = document.querySelector(".email");
+      const message = document.querySelector(".message");
+  
+      // Log values for debugging
+  
+  
+      const fetchData = async () => {
+        const url = `https://restapi-testing.onrender.com/rohit/${encodeURIComponent(name.value)}/${encodeURIComponent(email.value)}/${encodeURIComponent(message.value)}`;
+        try {
+          const response = await fetch(url); // Await the fetch promise
+          if (!response.ok) {
+            console.log("Error occurred while sending");
+            return;
+          }
+  
+          const data = await response.json(); // Await the JSON response
+          if (data) {
+            showNotification();
+            name.value="";
+            email.value="";
+            message.value="";
+             // Show notification on success
+          }
+        } catch (error) {
+          console.log("Error:", error);
+        }
+      };
+  
+      fetchData(); // Call the fetchData function
+    });
+  });
+  
+  // Function to show notification
+  function showNotification() {
+    const card = document.querySelector('.card');
+  
+    // Add 'show' class to make it visible
+    card.classList.add('show');
+  
+    // Hide the notification after 4 seconds
+    setTimeout(() => {
+      card.classList.remove('show');
+    }, 4000);
+  }
+  

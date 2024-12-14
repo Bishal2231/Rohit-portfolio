@@ -1,7 +1,7 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#data-scroll-container'),
     smooth: true,
-    lerp: 0.05, 
+    lerp: 0.10, 
     getSpeed: true,
     getDirection: true,
 });
@@ -52,3 +52,56 @@ document.body.addEventListener("click", () => {
 
 
 // =======================================================================
+
+//for project ................
+document.querySelector("#navProject").addEventListener("click", () => {
+    const targetElementProject = document.querySelector(".projectPage"); // Replace with the target element
+const targetProjectPosition = targetElementProject.getBoundingClientRect().top;
+    scroll.scrollTo(targetProjectPosition);
+});
+
+
+// for bio..................
+
+document.querySelector("#navBio").addEventListener('click',()=>{
+    const targetElementBio = document.querySelector('.page4');
+    const targetBioPosition = targetElementBio.getBoundingClientRect().top;
+
+    scroll.scrollTo(targetBioPosition);
+})
+
+
+document.querySelector('#navSkill').addEventListener('click',()=>{
+    const targetSkill = document.querySelector('.page2');
+    const targetSillPosition = targetSkill.getBoundingClientRect().top;
+
+    scroll.scrollTo(targetSillPosition);
+})
+
+
+
+document.querySelector('#navExp').addEventListener('click',()=>{
+    const targetExp = document.querySelector('.experince');
+    const targetExpPosition = targetExp.getBoundingClientRect().top;
+
+    scroll.scrollTo(targetExpPosition );
+})
+
+
+
+document.querySelector('#navEdu').addEventListener('click',()=>{
+    const targetEdu = document.querySelector('.bio-section');
+    const targetEduPosition = targetEdu.getBoundingClientRect().top;
+
+    scroll.scrollTo(targetEduPosition + 500 );
+})
+
+
+
+document.querySelector('#navCon').addEventListener('click',()=>{
+    const targetCon = document.querySelector('#page3');
+    const targetConPosition = targetCon.getBoundingClientRect().top;
+
+    scroll.scrollTo(targetConPosition);
+    
+})
